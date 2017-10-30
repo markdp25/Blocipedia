@@ -33,9 +33,8 @@ source 'https://rubygems.org'
  # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
  gem 'jbuilder', '~> 2.5'
 
- gem 'thor', '0.19.1'
+gem 'bootstrap-sass'
 
  group :development do
    gem 'listen', '~> 3.0.5'
  end
- 
