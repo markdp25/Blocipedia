@@ -35,6 +35,9 @@ source 'https://rubygems.org'
 
 gem 'bootstrap-sass'
 
+gem 'devise'
+
  group :development do
    gem 'listen', '~> 3.0.5'
+   gem 'rspec-rails', '~> 3.6'
  end
