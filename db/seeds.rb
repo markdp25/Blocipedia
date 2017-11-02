@@ -1,5 +1,6 @@
 require 'random_data'
 
+
   User.create(email: 'test@user.com', password: 'password',
     confirmed_at: Time.now
   )
