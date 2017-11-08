@@ -14,7 +14,8 @@ user = User.last
     Wiki.create!(
       title:  Faker::Seinfeld.character,
       body:   Faker::Seinfeld.quote,
-      user: user
+      user: user,
+      private: false
     )
   end
 
