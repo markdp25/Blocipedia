@@ -1,0 +1,16 @@
+<div class="form-group">
+  <div class="col-md-4">
+  </div>
+  <% if current_user.premium? || current_user.admin? %>
+  <div class="col-md-8">
+    <h3>Add Collaborators</h3>
+    <%= form_tag collaborators_path do |f| %>
+
+      Add Collaborators using their email address
+      <%= text_field_tag :email%>  <br>
+
+      <%= submit_tag "Save Email" %>
+    <% end %>  
+  </div>
+  <% end %>
+</div>

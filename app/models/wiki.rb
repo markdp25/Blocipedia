@@ -1,5 +1,7 @@
 class Wiki < ApplicationRecord
   belongs_to :user
+  has_many :users, through: :collaborators
+  has_many :collaborators, dependent: :destroy
 
   default_scope { order('created_at DESC') }
 
