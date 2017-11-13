@@ -4,13 +4,13 @@
   <% if current_user.premium? || current_user.admin? %>
   <div class="col-md-8">
     <h3>Add Collaborators</h3>
-    <%= form_tag collaborators_path do |f| %>
-
+    <%= form_tag collaborations_path do |f| %>
+      <%= hidden_field_tag :wiki_id, wiki.id %>
       Add Collaborators using their email address
       <%= text_field_tag :email%>  <br>
 
       <%= submit_tag "Save Email" %>
-    <% end %>  
+    <% end %>
   </div>
   <% end %>
 </div>

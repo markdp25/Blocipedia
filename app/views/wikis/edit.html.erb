@@ -14,6 +14,18 @@
   </div>
 </div>
 
+
 <div>
   <%= render partial: 'collaborators/form', locals: { wiki: @wiki } %>
 </div>
+
+<h3> Manage Collaborators: </h3>
+Total Collaborators: <%= @wiki.collaborations.count %> <br>
+<ul>
+  <% @wiki.collaborations.each do |collaborator| %>
+  <li>
+    <%= collaborator.user.email %>
+    <%= link_to "Delete Collaborator", collaboration_path(collaborator, wiki_id: @wiki.id), method: :delete, class: "btn-danger", data: {confirm: 'Are you sure you want to delete this collaborator?'} %>
+  </li>
+  <% end %>
+ </ul>
