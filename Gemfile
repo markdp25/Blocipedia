@@ -45,6 +45,10 @@ gem 'stripe'
 
  gem 'redcarpet'
 
+gem 'jquery-rails'
+
+gem 'friendly_id', '~> 5.1.0'
+
  group :development do
    gem 'listen', '~> 3.0.5'
    gem 'rspec-rails', '~> 3.6'

@@ -11,6 +11,17 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
 //= require turbolinks
  //= require bootstrap
 //= require_tree .
+
+
+$(document).on('turbolinks:load', function(){
+  var converter = new showdown.Converter();
+  $('#wiki_body').keyup(function(){
+    var mdown = $(this).val();
+    var html = converter.makeHtml(mdown);
+    $('#wiki_preview').html(html);
+  });
+});

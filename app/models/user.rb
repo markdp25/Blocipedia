@@ -14,9 +14,6 @@ class User < ApplicationRecord
   enum role: [:standard, :premium, :admin]
   after_initialize :set_standard, :if => :new_record?
 
-  extend FriendlyId
-  friendly_id :name, use: :slugged
-
   def set_standard
     self.role ||= :standard
   end
